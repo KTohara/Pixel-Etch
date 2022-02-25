@@ -4,25 +4,31 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="#">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200..900&display=swap" rel="stylesheet">  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
   <title>Pixel-Etch</title>
 </head>
 <body>
-  <h1>Pixel-Etch</h1>
-
+  <h1>pixel-etch</h1>
 
   <main class="main">
-    <div class="pixel-container"></div>
+    <div class="pixel-container">
+      
+    </div>
     <div class="settings">
       <div class="color-container">
-        <input class="color" type="color" value="#333333"></input>
+        <input class="color-swatch" type="color" value="#333333"></input>
         <p>Color</p>
       </div>
-      <button class="random">Random Color</button>
-      <button class="clear">Clear</button>
+      <button class="color-button">Color</button>
+      <button class="random-button">Random</button>
+      <button class="clear-button">Clear</button>
       <div class="scale-container">
-        <input class="scale" type="range" value="16" min="1" max="64"></input>
+        
+        <input id="scale" class="scale" type="range" value="16" min="1" max="64"></input>
         <p>Scale</p>
+        <p id="scale-value">16x16</p>
       </div>
 
     </div>
