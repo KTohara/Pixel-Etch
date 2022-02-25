@@ -31,14 +31,6 @@ h1 {
   text-shadow: 4px 4px 0px var(--secondary-light);
 }
 
-/* main {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2em;
-  max-width: 100em;
-  margin: 0 auto;
-} */
-
 button,
 input,
 p {
@@ -58,7 +50,6 @@ button {
   padding: 0 2px;
   cursor: pointer;
   transition: 0.2s;
-
 }
 
 button:hover {
@@ -69,12 +60,16 @@ button:hover {
   transition: 0.2s;
 }
 
-button:active {
+button:active,
+button.depressed {
   transform: scale(0.99);
   transition: 0.05s;
-  box-shadow: inset 1px 1px 3px #222;
-  transform: translateY(1px);
+  box-shadow: inset 1px 1px 4px #222;
   outline: none;
+}
+
+button.depressed {
+  background: var(--white);
 }
 
 .settings {
@@ -135,10 +130,11 @@ input[type="color"]::-moz-color-swatch {
 
 .clear-button {
   grid-row: 3 / 4;
+  grid-column: 3 / 4;
 }
 
 .scale-container {
-  grid-row: 1 / 4;
+  grid-row: 1 / 3;
   grid-column: 3 / 4;
   place-self: center;
 }
@@ -151,7 +147,6 @@ input[type="color"]::-moz-color-swatch {
 
 .scale:hover {
   cursor: pointer;
-  /* box-shadow: 1px 1px 2px var(--secondary-dark); */
   transition: 0.2s;
   opacity: 1;
 }
